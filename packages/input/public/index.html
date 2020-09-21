@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes" />
+
+    <title>Orxe3 Components</title>
+
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="https://oski-cdn.s3.amazonaws.com/common/css/fonts/ProximaNova/proxima-nova.css" />
+    <link rel="stylesheet" type="text/css" href="https://components.qa.cnxloyalty.com/theme/css/imports.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.3.0/custom-elements-es5-adapter.js"></script>
+
+</head>
+
+<style>
+    .titleDiv {
+        margin-left: 400px;
+    }
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        margin: 20px;
+    }
+    
+    @media only screen and (max-width: 600px) {
+        .grid-container {
+            grid-template-columns: 1fr;
+            margin-left: 10px;
+        }
+        .titleDiv {
+            margin-left: 20px;
+        }
+    }
+</style>
+
+<body>
+    <div class="titleDiv">
+        <h1> Input Fields</h1>
+    </div>
+    <div class="grid-container">
+        <div class="grid-child">
+            <h2>Input Field - Default</h2>
+            <orxe-input label="Username" type="string" value="" placeholder="Placeholder">
+            </orxe-input>
+        </div>
+        <div class="grid-child">
+            <h2>Input Field - Mandatory</h2>
+            <orxe-input label="Username*" type="string" value="" placeholder="Placeholder">
+            </orxe-input>
+        </div>
+        <div class="grid-child">
+            <h2>Input Field - On Focus</h2>
+            <orxe-input label="Username" type="string" value="" isFocus="true" placeholder="Placeholder">
+            </orxe-input>
+        </div>
+        <div class="grid-child">
+            <h2>Input Field - Active</h2>
+            <orxe-input label="Username" type="string" value="" isActive="true" placeholder="Placeholder">
+            </orxe-input>
+        </div>
+        <div class="grid-child">
+            <h2>Input Field - Filled</h2>
+            <orxe-input label="Username" type="string" value="Tavisca" isFilled="true" placeholder="Placeholder ">
+            </orxe-input>
+        </div>
+        <div class="grid-child">
+            <h2>Input Field - Error</h2>
+            <orxe-input label="Username" type="string" value="" required="true" isError="true" placeholder="Placeholder">
+            </orxe-input>
+        </div>
+        <div class="grid-child">
+            <h2>Input Field - Disabled</h2>
+            <orxe-input label="Username" type="string" value="" disabled="true" placeholder="Placeholder">
+            </orxe-input>
+        </div>
+        <div class="grid-child">
+            <h2>Input Field - Readonly</h2>
+            <orxe-input label="Username" type="string" value="Tavisca" readonly="true" placeholder="Placeholder">
+            </orxe-input>
+        </div>
+    </div>
+</body>
+<script text="javascript">
+    document.querySelector("orxe-input").addEventListener("val-change", function(event) {
+        console.log(event.detail.value);
+    });
+</script>
+
+</html>

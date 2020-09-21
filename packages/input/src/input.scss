@@ -1,0 +1,101 @@
+@import "./input-map.scss";
+.form-group {
+    background-color: var(--input-background-color);
+    height: $container-height;
+    margin: 20px;
+    position: relative;
+    display: grid;
+    width: 400px;
+    .input-class {
+        background: var(--input-background-color);
+        border-color: var(--input-border-color);
+        border-radius: 4px;
+        border-width: 1px;
+        color: var(--input-primary-text);
+        font-size: 1.6rem;
+        font-weight: var(--input-font-weight);
+        letter-spacing: $placeholder-letter-spacing;
+        line-height: $placeholder-line-height;
+        height: $input-height;
+        max-width: $max-width;
+        min-width: $min-width;
+        padding-left: $placeholder-padding-left;
+        padding-right: $placeholder-padding-right;
+        touch-action: var(--input-touch-target);
+        cursor: text;
+        &.active {
+            border-width: $focus-active-border-width;
+            border-color: var(--input-active-background-color);
+            color: var(--input-primary-text);
+            outline: $outline;
+        }
+        &:disabled,
+        &:disabled~.label {
+            cursor: no-drop;
+            opacity: 0.5;
+        }
+        &.error {
+            border-color: var(--input-error-border-color);
+            border-width: $focus-active-border-width;
+        }
+        &.filled {
+            border-color: var(--input-border-color);
+            color: var(--input-primary-text);
+        }
+        &:focus,
+        &.focus {
+            border-color: var(--input-focus-border-color);
+            border-width: $focus-active-border-width;
+            outline: $outline;
+        }
+        &::placeholder {
+            color: var(--input-disabled-color);
+            font-family: var(--input-font-family);
+            font-size: 1.6rem;
+            font-weight: var(--input-font-weight);
+            letter-spacing: $placeholder-letter-spacing;
+            line-height: $placeholder-line-height;
+        }
+    }
+    label {
+        background-color: var(--input-background-color);
+        color: var(--label-font-color);
+        font-family: var(--input-font-family);
+        font-size: var(--label-font-size);
+        font-weight: var(--input-font-weight);
+        left: 0;
+        letter-spacing: $placeholder-letter-spacing;
+        line-height: $placeholder-line-height;
+        margin-left: $label-margin-left;
+        margin-right: $label-margin-right;
+        padding-left: 4px;
+        padding-right: 4px;
+        pointer-events: none;
+        position: absolute;
+        transform: translateY(-50%);
+    }
+    .close-icon {
+        color: var(--input-border-color);
+        cursor: pointer;
+        left: 183px;
+        padding-left: $placeholder-padding-left;
+        padding-right: $placeholder-padding-right;
+        position: absolute;
+        top: 17px;
+        width: 16px;
+    }
+    .error-msg {
+        color: var(--input-error-border-color);
+        font-size: 1.2rem;
+        font-weight: 600;
+        left: 0px;
+        position: absolute;
+        top: 54px;
+    }
+    @media only screen and (max-width: 600px) {
+        .input-class {
+            width: 200px;
+            margin-left: 5px;
+        }
+    }
+}

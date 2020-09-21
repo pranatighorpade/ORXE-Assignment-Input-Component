@@ -1,0 +1,29 @@
+:host {
+    --input-active-background-color: var(--primary);
+    --input-background-color: var(--neutral);
+    --input-border-color: var(--tertiary-text);
+    --input-disabled-color: var(--disabled-text);
+    --input-error-border-color: var(--error);
+    --input-focus-border-color: var(--secondary);
+    --input-font-family: var(--global-font-family);
+    --input-font-color: var(--secondary-text);
+    --input-font-weight: var(--font-weight-regular);
+    --input-primary-text: var(--primary-text);
+    --input-touch-target: var(--touch-target-large);
+    --label-font-color: var(--secondary-text);
+    --label-font-size: var(--body-secondary-font-size);
+}
+
+$container-height:56px;
+$focus-active-border-width:2px;
+$input-height:48px;
+$label-margin-left: 16px;
+$label-margin-right: 16px;
+$max-width:100%;
+$min-width:136px;
+$outline: none;
+$outline-width: 0px;
+$placeholder-letter-spacing: 0;
+$placeholder-line-height: 1.5;
+$placeholder-padding-left: 16px;
+$placeholder-padding-right: 16px;
